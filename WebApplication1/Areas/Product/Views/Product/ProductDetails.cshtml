@@ -1,0 +1,61 @@
+﻿@model SPAShoppingCartApp.Areas.Product.Models.Product
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table id="product-details" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td width="30%" align="center" class="detailimage">
+                <img itemprop="image" id="prodimage0" class="prodimage detailimage" src="http://img6a.flixcart.com/image/shoe/f/c/7/black-white-scarle-hellion-m-adidas-8-400x400-imaefsdxhpn4cxvf.jpeg" alt="External  Modem">
+            </td>
+            <td>&nbsp;
+            </td>
+            <td width="70%" valign="top" class="detail">
+                <div class="detailid"><strong>Product ID:</strong> <span itemprop="productID">@Model.ProductId</span></div>
+                <div class="detailname"><span itemprop="name">@Model.ProductName</span></div>
+                <div class="prodinstock detailinstock"><strong>In Stock:</strong> 50</div>
+                <br>
+                <div class="detailprice" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                    <meta itemprop="priceCurrency" content="USD">
+                    <strong>Price:</strong> <span class="price" id="pricediv0" itemprop="price">@Model.ProductPrice</span>
+                </div>
+                <hr width="80%" class="currencyhr">
+                @*<script type="text/javascript">/* <![CDATA[ */function formvalidator0(theForm) {
+    return (true);
+}
+                    /* ]]> */</script>*@
+                <table border="0" cellspacing="1" cellpadding="1" width="100%">
+                    <tbody>
+                        <tr>
+                            <td align="right">Quantity:</td>
+                            <td>
+                                <div class="quantitydiv detailquantityinput" style="margin-right: 12px; white-space: nowrap">
+                                    <input type="text" name="quant" id="w0quant" maxlength="5" size="4" value="1" title="Quantity" style="float: left">
+                                    <img src="/images/quantarrowu.png" onclick="quantup(0,1)" alt=""><br>
+                                    <img src="/images/quantarrowd.png" onclick="quantup(0,0)" alt="">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p align="center">
+                    <input type="hidden" name="id" value="modem1">
+                    <input type="hidden" name="mode" value="add">
+                    @Html.ActionLink("Add To Cart", "AddProductToCart", "ShoppingCart", new { area = "ShoppingCart", productId = Model.ProductId, quantity = "2" }, htmlAttributes: new { @class = "username", title = "Manage" })
+                </p>
+                <p class="pagenums" align="center">
+                    <a class="ectlink emailfriend" rel="nofollow" href="javascript:openEFWindow('modem1',false)"><strong><span style="vertical-align: text-bottom">
+                        <img src="http://www.thetemplatestore.com/images/email_go.png" alt="Email a Friend" width="16" height="16" border="0"></span> Tell a Friend</strong></a> | <a class="ectlink emailfriend" rel="nofollow" href="javascript:openEFWindow('modem1',true)"><strong>Ask a Question <span style="vertical-align: text-bottom">
+                            <img src="http://www.thetemplatestore.com/images/email_edit.png" alt="Ask a Question" width="16" height="16" border="0"></span></strong></a>
+                </p>
+                <hr width="80%">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    @Html.ActionLink("Back to List", "GetProducts")
+</p>

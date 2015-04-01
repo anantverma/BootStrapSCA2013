@@ -1,0 +1,51 @@
+﻿@model IEnumerable<SPAShoppingCartApp.Areas.ShoppingCart.Models.CartItem>
+
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table id="cart">
+    <tr>
+        <th class="first"></th>
+        <th class="second">Product Code
+        </th>
+        <th class="third">Quantity Ordered.
+        </th>
+        <th class="fourth">Price
+        </th>
+        <th class="fifth"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="productitm">
+            <td>
+                <img src="@item.ProductImageSrc" alt="Prooduct Image" />
+            </td>
+            <td>
+                @item.ProductName
+            </td>
+            <td>
+                @item.ProductQuantity
+            </td>
+            <td>
+                @(item.ProductQuantity * 1000)
+            </td>
+            <td>
+                @Html.ActionLink("Remove", "Delete", new { id = item.ProductId })
+            </td>
+        </tr>
+    }
+
+    <tr class="totalprice">
+        <td class="light">Total:</td>
+        <td colspan="2">&nbsp;</td>
+        <td colspan="1"><span class="thick">$225.45</span></td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr class="checkoutrow">
+        <td colspan="5" class="checkout">
+            <button id="submitbtn">Checkout Now!</button></td>
+    </tr>
+
+</table>

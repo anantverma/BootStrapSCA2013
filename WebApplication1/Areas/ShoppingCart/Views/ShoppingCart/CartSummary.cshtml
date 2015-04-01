@@ -1,0 +1,12 @@
+﻿@model int
+@{
+    if(Model > 0)
+    {
+        @Html.ActionLink("Cart("+ Model +")", "Cart", "ShoppingCart", routeValues: new { area = "ShoppingCart" }, htmlAttributes: new { @class = "username", title = "Cart" })
+    }
+    else
+    {
+        @Html.ActionLink("Cart", "Cart", "ShoppingCart", routeValues: new { area = "ShoppingCart" }, htmlAttributes: new { @class = "username", title = "Cart" })
+    }
+}
+

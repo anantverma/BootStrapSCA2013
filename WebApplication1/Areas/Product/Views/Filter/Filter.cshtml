@@ -1,0 +1,20 @@
+﻿@model IEnumerable<SPAShoppingCartApp.Areas.Product.Models.SearchFilter>
+
+@{
+    Layout = null;
+    var Title = ViewBag.Title;
+}
+<h3 class="product-title">@Title</h3>
+<div class="div-filter-range">
+    <ul id="discount_range" class="facets" valuelimit="" keepcollapsed="" displaytype="" nofilter="1" style="display: block;">
+
+        @foreach (var filter in Model)
+        {
+            <li class="facet " title="@filter.FilterText">
+                <input autocomplete="off" class="facetoption" type="checkbox" value="@filter.FilterQueryString">
+                <span class="title fk-inline-block lmargin5" original="@filter.FilterText">@filter.FilterText</span>
+            </li>
+        }
+
+    </ul>
+</div>

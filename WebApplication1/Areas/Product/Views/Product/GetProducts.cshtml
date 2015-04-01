@@ -1,0 +1,43 @@
+﻿@model IEnumerable<SPAShoppingCartApp.Areas.Product.Models.Product>
+
+@{
+    ViewBag.Title = "GetProducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="product-search-div">
+    <div id="product-filter" class="accordion">
+            @{Html.RenderAction("BrandFilter", "Filter", new { area = "Product" });}
+            @{Html.RenderAction("PriceFilter", "Filter", new { area = "Product" });}
+            @{Html.RenderAction("SizeFilter", "Filter", new { area = "Product" });}
+    </div>
+    <div id="product-list-div">
+        @foreach (var item in Model)
+        {
+        
+            <div class="eStore-productlist eStore-fancy-wrapper">
+                <div class="eStore-productlist-product-thumbnail">
+                    <a href="https://www.tipsandtricks-hq.com/wp-content/uploads/2012/05/eStore-package-box-400.jpg" rel="lightbox[Wordpress eStore Plugin]" title="Wordpress eStore Plugin">
+                        <img class="thumb-image" src="http://img6a.flixcart.com/image/shoe/f/c/7/black-white-scarle-hellion-m-adidas-8-400x400-imaefsdxhpn4cxvf.jpeg" alt="Wordpress eStore Plugin" width="100px"></a>
+                </div>
+                <div class="eStore-productlist-product-description">
+                    <div class="eStore-product-name">
+                        @Html.ActionLink(item.ProductName, "ProductDetails", "Product", new { area = "Product", id = item.ProductId }, htmlAttributes: new { @class = "username", title = "Manage" })
+                    </div>
+                    @Html.DisplayFor(modelItem => item.ProductDescription)
+                    <a href="#"><u>More Info</u></a>
+                    <div class="eStore_price">
+                        <span class="eStore_price_label"><strong>Price: </strong></span>
+                        <span class="eStore_price_value">@Html.DisplayFor(modelItem => item.ProductPrice)</span>
+                    </div>
+                    @Html.ActionLink("Details", "Details", new { id = item.ProductId })
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section scripts {
+        @Scripts.Render("~/bundles/product")
+    }
