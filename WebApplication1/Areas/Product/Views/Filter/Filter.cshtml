@@ -4,17 +4,28 @@
     Layout = null;
     var Title = ViewBag.Title;
 }
-<h3 class="product-title">@Title</h3>
-<div class="div-filter-range">
-    <ul id="discount_range" class="facets" valuelimit="" keepcollapsed="" displaytype="" nofilter="1" style="display: block;">
 
-        @foreach (var filter in Model)
-        {
-            <li class="facet " title="@filter.FilterText">
-                <input autocomplete="off" class="facetoption" type="checkbox" value="@filter.FilterQueryString">
-                <span class="title fk-inline-block lmargin5" original="@filter.FilterText">@filter.FilterText</span>
-            </li>
-        }
+@Styles.Render("~/Content/App/App.css")
 
-    </ul>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">@Title</h3>
+        <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+    </div>
+
+    <div class="panel-body">
+        <ul id="discount_range" class="facets" valuelimit="" keepcollapsed="" displaytype="" nofilter="1" style="display: block;">
+
+            @foreach (var filter in Model)
+            {
+                <li class="facet " title="@filter.FilterText">
+                    <a href="#">
+                        <input autocomplete="off" class="facetoption" type="checkbox" value="@filter.FilterQueryString">
+                        <span class="title fk-inline-block lmargin5" original="@filter.FilterText">@filter.FilterText</span>
+                    </a>
+                </li>
+            }
+
+        </ul>
+    </div>
 </div>

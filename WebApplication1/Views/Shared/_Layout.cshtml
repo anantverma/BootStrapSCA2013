@@ -31,9 +31,14 @@
             @{Html.RenderAction("Search", "Search", new { area = "Search" });}
         </div>
         <div id="body">
-            <br />
-            <br />
             @RenderBody()
+
+            <div id="modal-container" class="modal fade"
+                 tabindex="-1" role="dialog">
+                <div class="modal-content">
+                </div>
+            </div>
+
         </div>
         <hr />
         <footer>
@@ -43,6 +48,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/AppScripts/bootstrap.modal.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -2,50 +2,66 @@
 
 @{
     ViewBag.Title = "Cart";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<table id="cart">
-    <tr>
-        <th class="first"></th>
-        <th class="second">Product Code
-        </th>
-        <th class="third">Quantity Ordered.
-        </th>
-        <th class="fourth">Price
-        </th>
-        <th class="fifth"></th>
-    </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr class="productitm">
-            <td>
-                <img src="@item.ProductImageSrc" alt="Prooduct Image" />
-            </td>
-            <td>
-                @item.ProductName
-            </td>
-            <td>
-                @item.ProductQuantity
-            </td>
-            <td>
-                @(item.ProductQuantity * 1000)
-            </td>
-            <td>
-                @Html.ActionLink("Remove", "Delete", new { id = item.ProductId })
-            </td>
-        </tr>
-    }
 
-    <tr class="totalprice">
-        <td class="light">Total:</td>
-        <td colspan="2">&nbsp;</td>
-        <td colspan="1"><span class="thick">$225.45</span></td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr class="checkoutrow">
-        <td colspan="5" class="checkout">
-            <button id="submitbtn">Checkout Now!</button></td>
-    </tr>
+<div class="modal-body">
+    <div class="alert alert-warning">
 
-</table>
+        <div class="row">
+            <div class="col-md-2">
+                Product Code
+            </div>
+            <div class="col-md-2">
+                Product Name
+            </div>
+            <div class="col-md-2">
+                Quantity Ordered.
+            </div>
+            <div class="col-md-2">
+                Price
+            </div>
+            <div class="col-md-2">
+                Total Cost
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="@item.ProductImageSrc" alt="Prooduct Image" />
+                </div>
+                <div class="col-md-2">
+                    @item.ProductName
+                </div>
+                <div class="col-md-2">
+                    @item.ProductQuantity
+                </div>
+                <div class="col-md-2">
+                    @item.ProductPrice
+                </div>
+                <div class="col-md-2">
+                    @(int.Parse(item.ProductPrice) * item.ProductQuantity)
+                </div>
+                <div class="col-md-2">
+                    @Html.ActionLink("Remove", "Delete", new { id = item.ProductId })
+                </div>
+            </div>
+        }
+
+        <div class="row">
+            <div class="col-md-2">Total:</div>
+            <div class="col-md-8">&nbsp;</div>
+            <div class="col-md-2"><span class="thick">$225.45</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button id="submitbtn">Checkout Now!</button>
+            </div>
+        </div>
+    </div>
+</div>

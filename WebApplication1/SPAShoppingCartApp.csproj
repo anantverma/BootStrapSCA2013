@@ -217,6 +217,7 @@
     <Content Include="Areas\ShoppingCart\Views\ShoppingCart\Cart.cshtml" />
     <Content Include="Areas\ShoppingCart\Views\ShoppingCart\CartSummary.cshtml" />
     <Content Include="Areas\ShoppingCart\Views\Web.config" />
+    <Content Include="Content\App\App.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -237,6 +238,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Icon.png" />
+    <Content Include="Scripts\AppScripts\bootstrap.accordian.js" />
+    <Content Include="Scripts\AppScripts\bootstrap.modal.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
