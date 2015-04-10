@@ -108,6 +108,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -179,6 +181,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Product\Controllers\FilterController.cs" />
     <Compile Include="Areas\Product\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Product\Models\FilterViewModel.cs" />
     <Compile Include="Areas\Product\Models\Product.cs" />
     <Compile Include="Areas\Product\Models\ProductCategory.cs" />
     <Compile Include="Areas\Product\Models\SearchFilter.cs" />
@@ -208,6 +211,11 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\CartService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -240,6 +248,8 @@
     <Content Include="Icon.png" />
     <Content Include="Scripts\AppScripts\bootstrap.accordian.js" />
     <Content Include="Scripts\AppScripts\bootstrap.modal.js" />
+    <Content Include="Scripts\AppScripts\filter\product.filter.js" />
+    <Content Include="Scripts\AppScripts\ShoppingCart\ShoppingCart.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
@@ -257,6 +267,13 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <None Include="Service References\CartService\CartAppService.disco" />
+    <None Include="Service References\CartService\configuration91.svcinfo" />
+    <None Include="Service References\CartService\configuration.svcinfo" />
+    <None Include="Service References\CartService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -292,6 +309,16 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
+    <None Include="Service References\CartService\CartAppService.wsdl" />
+    <None Include="Service References\CartService\CartAppService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CartService\CartAppService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CartService\CartAppService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -303,6 +330,12 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CartService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

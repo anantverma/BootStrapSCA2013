@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SPAShoppingCartApp.Areas.Product.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,17 +18,24 @@ namespace SPAShoppingCartApp.Areas.Product.Controllers
         private void getProducts()
         {
             products = new List<Models.Product>();
-            products.Add(new Models.Product { CategoryId = 1, ProductId = 1, ProductPrice = 1000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
-            products.Add(new Models.Product { CategoryId = 1, ProductId = 2, ProductPrice = 2000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
-            products.Add(new Models.Product { CategoryId = 1, ProductId = 3, ProductPrice = 3000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
-            products.Add(new Models.Product { CategoryId = 1, ProductId = 4, ProductPrice = 4000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
-            products.Add(new Models.Product { CategoryId = 1, ProductId = 5, ProductPrice = 5000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
-            products.Add(new Models.Product { CategoryId = 1, ProductId = 6, ProductPrice = 6000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
+            products.Add(new Models.Product { CategoryId = 1, ProductId = 1, ProductBrand = "Reebok", ProductPrice = 1000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
+            products.Add(new Models.Product { CategoryId = 1, ProductId = 2, ProductBrand = "Reebok", ProductPrice = 2000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
+            products.Add(new Models.Product { CategoryId = 1, ProductId = 3, ProductBrand = "Bata", ProductPrice = 3000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
+            products.Add(new Models.Product { CategoryId = 1, ProductId = 4, ProductBrand = "Nike", ProductPrice = 4000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
+            products.Add(new Models.Product { CategoryId = 1, ProductId = 5, ProductBrand = "Nike", ProductPrice = 5000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
+            products.Add(new Models.Product { CategoryId = 1, ProductId = 6, ProductBrand = "Puma", ProductPrice = 6000, ProductName = "Bata Shoes", ProductDescription = "Comfortable shoes.", ProductImage = null });
         }
 
-        public ActionResult GetProducts()
+        public ActionResult GetProducts(IEnumerable<FilterViewModel> filters)
         {
             getProducts();
+            if (filters != null && filters.Count() > 0)
+            {
+                foreach (FilterViewModel filter in filters)
+                {
+                    products.Where(product => product.ProductBrand == filter.Value);                    
+                }
+            }
             return View("GetProducts", products);
         }
 

@@ -14,6 +14,7 @@ namespace SPAShoppingCartApp.Areas.Product
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
+
             context.MapRoute(
                 "Product_default",
                 "Product/{controller}/{action}/{id}",

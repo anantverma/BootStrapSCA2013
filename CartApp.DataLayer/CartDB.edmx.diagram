@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6afec4ddb6b746f58c76cd5c86b75117" Name="Diagram1">
+        <EntityTypeShape EntityType="ShoppingCartDbModel.Brand" Width="1.5" PointX="0.75" PointY="2.125" />
+        <EntityTypeShape EntityType="ShoppingCartDbModel.Cart" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="ShoppingCartDbModel.Category" Width="1.5" PointX="0.75" PointY="8" />
+        <EntityTypeShape EntityType="ShoppingCartDbModel.Color" Width="1.5" PointX="0.75" PointY="12.875" />
+        <EntityTypeShape EntityType="ShoppingCartDbModel.CustomerType" Width="1.5" PointX="0.75" PointY="10.625" />
+        <EntityTypeShape EntityType="ShoppingCartDbModel.Product" Width="1.5" PointX="5.25" PointY="1.875" />
+        <EntityTypeShape EntityType="ShoppingCartDbModel.ProductDescription" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="ShoppingCartDbModel.Size" Width="1.5" PointX="0.75" PointY="5.5" />
+        <AssociationConnector Association="ShoppingCartDbModel.FK_tbl_ProductDescription_tbl_Brand" />
+        <AssociationConnector Association="ShoppingCartDbModel.FK_tbl_ProductDescription_tbl_Category" />
+        <AssociationConnector Association="ShoppingCartDbModel.FK_tbl_ProductDescription_tbl_Color" />
+        <AssociationConnector Association="ShoppingCartDbModel.FK_tbl_ProductDescription_tbl_CustomerType" />
+        <AssociationConnector Association="ShoppingCartDbModel.FK_tbl_Product_tbl_ProductDescription" />
+        <AssociationConnector Association="ShoppingCartDbModel.FK_tbl_ProductDescription_tbl_Size" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

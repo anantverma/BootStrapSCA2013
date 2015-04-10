@@ -19,13 +19,13 @@
             @foreach (var filter in Model)
             {
                 <li class="facet " title="@filter.FilterText">
-                    <a href="#">
-                        <input autocomplete="off" class="facetoption" type="checkbox" value="@filter.FilterQueryString">
-                        <span class="title fk-inline-block lmargin5" original="@filter.FilterText">@filter.FilterText</span>
-                    </a>
-                </li>
+                    <input autocomplete="off" class="filter-facetoption-chk" type="checkbox" value="@filter.FilterQueryString">
+                    <a href="#" class="filter-facetoption-link" original="@filter.FilterText">
+                        @filter.FilterText
+                </a>
+            </li>
             }
-
+           
         </ul>
     </div>
 </div>

@@ -12,6 +12,7 @@ namespace SPAShoppingCartApp.Areas.Product.Models
         public string ProductDescription { get; set; }
         public byte[] ProductImage { get; set; }
         public double ProductPrice { get; set; }
+        public string ProductBrand { get; set; }
         public int CategoryId { get; set; }
     }
 }
