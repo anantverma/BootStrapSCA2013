@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShoppingCartDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrandName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BrandDescription" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductCategory" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductPrice" Type="numeric" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="ProductQuantity" Type="int" Nullable="false" />
+    <Property Name="IsShoppingCart" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CategoryDescription" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ColorName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerType" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductDetailId" Type="int" Nullable="false" />
+    <Property Name="IsSold" Type="bit" Nullable="false" />
+    <Property Name="StockInDate" Type="datetime" />
+    <Property Name="SoldDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProductDescription">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductDescription" Type="nvarchar(max)" />
+    <Property Name="Brand" Type="int" />
+    <Property Name="Color" Type="int" />
+    <Property Name="Size" Type="int" />
+    <Property Name="Category" Type="int" />
+    <Property Name="Customer" Type="int" />
+    <Property Name="Price" Type="numeric" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="Image" Type="image" />
+  </EntityType>
+  <EntityType Name="Size">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SizeNumber" Type="numeric" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="SizeDescription" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_tbl_Product_tbl_ProductDescription">
+    <End Role="ProductDescription" Type="Self.ProductDescription" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductDescription">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_ProductDescription_tbl_Brand">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+    <End Role="ProductDescription" Type="Self.ProductDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductDescription">
+        <PropertyRef Name="Brand" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_ProductDescription_tbl_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="ProductDescription" Type="Self.ProductDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductDescription">
+        <PropertyRef Name="Category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_ProductDescription_tbl_Color">
+    <End Role="Color" Type="Self.Color" Multiplicity="0..1" />
+    <End Role="ProductDescription" Type="Self.ProductDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductDescription">
+        <PropertyRef Name="Color" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_ProductDescription_tbl_CustomerType">
+    <End Role="CustomerType" Type="Self.CustomerType" Multiplicity="0..1" />
+    <End Role="ProductDescription" Type="Self.ProductDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductDescription">
+        <PropertyRef Name="Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_ProductDescription_tbl_Size">
+    <End Role="Size" Type="Self.Size" Multiplicity="0..1" />
+    <End Role="ProductDescription" Type="Self.ProductDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Size">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductDescription">
+        <PropertyRef Name="Size" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ShoppingCartDbModelStoreContainer">
+    <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cart" EntityType="Self.Cart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerType" EntityType="Self.CustomerType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductDescription" EntityType="Self.ProductDescription" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Size" EntityType="Self.Size" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbl_Product_tbl_ProductDescription" Association="Self.FK_tbl_Product_tbl_ProductDescription">
+      <End Role="ProductDescription" EntitySet="ProductDescription" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_ProductDescription_tbl_Brand" Association="Self.FK_tbl_ProductDescription_tbl_Brand">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="ProductDescription" EntitySet="ProductDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_ProductDescription_tbl_Category" Association="Self.FK_tbl_ProductDescription_tbl_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="ProductDescription" EntitySet="ProductDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_ProductDescription_tbl_Color" Association="Self.FK_tbl_ProductDescription_tbl_Color">
+      <End Role="Color" EntitySet="Color" />
+      <End Role="ProductDescription" EntitySet="ProductDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_ProductDescription_tbl_CustomerType" Association="Self.FK_tbl_ProductDescription_tbl_CustomerType">
+      <End Role="CustomerType" EntitySet="CustomerType" />
+      <End Role="ProductDescription" EntitySet="ProductDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_ProductDescription_tbl_Size" Association="Self.FK_tbl_ProductDescription_tbl_Size">
+      <End Role="Size" EntitySet="Size" />
+      <End Role="ProductDescription" EntitySet="ProductDescription" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -53,3 +53,5 @@ E:\Codes\POC\BootStrapSCA2013\WebApplication1\bin\System.Web.Optimization.xml
 E:\Codes\POC\BootStrapSCA2013\WebApplication1\obj\Debug\SPAShoppingCartApp.dll
 E:\Codes\POC\BootStrapSCA2013\WebApplication1\obj\Debug\SPAShoppingCartApp.pdb
 E:\Codes\POC\BootStrapSCA2013\WebApplication1\obj\Debug\SPAShoppingCartApp.csprojResolveAssemblyReference.cache
+E:\Codes\POC\BootStrapSCA2013\WebApplication1\bin\CartApp.Entities.dll
+E:\Codes\POC\BootStrapSCA2013\WebApplication1\bin\CartApp.Entities.pdb

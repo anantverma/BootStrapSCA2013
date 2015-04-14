@@ -8,3 +8,889 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+namespace SPAShoppingCartApp.CartService {
+    using System.Runtime.Serialization;
+    using System;
+    
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Category", Namespace="http://schemas.datacontract.org/2004/07/CartApp.Entities")]
+    [System.SerializableAttribute()]
+    public partial class Category : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CategoryDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CategoryNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> ProductDescriptionsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CategoryDescription {
+            get {
+                return this.CategoryDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CategoryDescriptionField, value) != true)) {
+                    this.CategoryDescriptionField = value;
+                    this.RaisePropertyChanged("CategoryDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CategoryName {
+            get {
+                return this.CategoryNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CategoryNameField, value) != true)) {
+                    this.CategoryNameField = value;
+                    this.RaisePropertyChanged("CategoryName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> ProductDescriptions {
+            get {
+                return this.ProductDescriptionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductDescriptionsField, value) != true)) {
+                    this.ProductDescriptionsField = value;
+                    this.RaisePropertyChanged("ProductDescriptions");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProductDescription", Namespace="http://schemas.datacontract.org/2004/07/CartApp.Entities")]
+    [System.SerializableAttribute()]
+    public partial class ProductDescription : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> BrandField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SPAShoppingCartApp.CartService.Brand Brand1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> CategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SPAShoppingCartApp.CartService.Category Category1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> ColorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SPAShoppingCartApp.CartService.Color Color1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> CustomerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SPAShoppingCartApp.CartService.CustomerType CustomerTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductDescription1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.Product> ProductsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> SizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SPAShoppingCartApp.CartService.Size Size1Field;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Brand {
+            get {
+                return this.BrandField;
+            }
+            set {
+                if ((this.BrandField.Equals(value) != true)) {
+                    this.BrandField = value;
+                    this.RaisePropertyChanged("Brand");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SPAShoppingCartApp.CartService.Brand Brand1 {
+            get {
+                return this.Brand1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Brand1Field, value) != true)) {
+                    this.Brand1Field = value;
+                    this.RaisePropertyChanged("Brand1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Category {
+            get {
+                return this.CategoryField;
+            }
+            set {
+                if ((this.CategoryField.Equals(value) != true)) {
+                    this.CategoryField = value;
+                    this.RaisePropertyChanged("Category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SPAShoppingCartApp.CartService.Category Category1 {
+            get {
+                return this.Category1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Category1Field, value) != true)) {
+                    this.Category1Field = value;
+                    this.RaisePropertyChanged("Category1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Color {
+            get {
+                return this.ColorField;
+            }
+            set {
+                if ((this.ColorField.Equals(value) != true)) {
+                    this.ColorField = value;
+                    this.RaisePropertyChanged("Color");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SPAShoppingCartApp.CartService.Color Color1 {
+            get {
+                return this.Color1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Color1Field, value) != true)) {
+                    this.Color1Field = value;
+                    this.RaisePropertyChanged("Color1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Customer {
+            get {
+                return this.CustomerField;
+            }
+            set {
+                if ((this.CustomerField.Equals(value) != true)) {
+                    this.CustomerField = value;
+                    this.RaisePropertyChanged("Customer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SPAShoppingCartApp.CartService.CustomerType CustomerType {
+            get {
+                return this.CustomerTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerTypeField, value) != true)) {
+                    this.CustomerTypeField = value;
+                    this.RaisePropertyChanged("CustomerType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProductDescription1 {
+            get {
+                return this.ProductDescription1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductDescription1Field, value) != true)) {
+                    this.ProductDescription1Field = value;
+                    this.RaisePropertyChanged("ProductDescription1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProductName {
+            get {
+                return this.ProductNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductNameField, value) != true)) {
+                    this.ProductNameField = value;
+                    this.RaisePropertyChanged("ProductName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.Product> Products {
+            get {
+                return this.ProductsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductsField, value) != true)) {
+                    this.ProductsField = value;
+                    this.RaisePropertyChanged("Products");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Size {
+            get {
+                return this.SizeField;
+            }
+            set {
+                if ((this.SizeField.Equals(value) != true)) {
+                    this.SizeField = value;
+                    this.RaisePropertyChanged("Size");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SPAShoppingCartApp.CartService.Size Size1 {
+            get {
+                return this.Size1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Size1Field, value) != true)) {
+                    this.Size1Field = value;
+                    this.RaisePropertyChanged("Size1");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Brand", Namespace="http://schemas.datacontract.org/2004/07/CartApp.Entities")]
+    [System.SerializableAttribute()]
+    public partial class Brand : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BrandDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BrandNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> ProductDescriptionsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BrandDescription {
+            get {
+                return this.BrandDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BrandDescriptionField, value) != true)) {
+                    this.BrandDescriptionField = value;
+                    this.RaisePropertyChanged("BrandDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BrandName {
+            get {
+                return this.BrandNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BrandNameField, value) != true)) {
+                    this.BrandNameField = value;
+                    this.RaisePropertyChanged("BrandName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> ProductDescriptions {
+            get {
+                return this.ProductDescriptionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductDescriptionsField, value) != true)) {
+                    this.ProductDescriptionsField = value;
+                    this.RaisePropertyChanged("ProductDescriptions");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Color", Namespace="http://schemas.datacontract.org/2004/07/CartApp.Entities")]
+    [System.SerializableAttribute()]
+    public partial class Color : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColorNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> ProductDescriptionsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ColorName {
+            get {
+                return this.ColorNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorNameField, value) != true)) {
+                    this.ColorNameField = value;
+                    this.RaisePropertyChanged("ColorName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> ProductDescriptions {
+            get {
+                return this.ProductDescriptionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductDescriptionsField, value) != true)) {
+                    this.ProductDescriptionsField = value;
+                    this.RaisePropertyChanged("ProductDescriptions");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerType", Namespace="http://schemas.datacontract.org/2004/07/CartApp.Entities")]
+    [System.SerializableAttribute()]
+    public partial class CustomerType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CustomerType1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> ProductDescriptionsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerType1 {
+            get {
+                return this.CustomerType1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerType1Field, value) != true)) {
+                    this.CustomerType1Field = value;
+                    this.RaisePropertyChanged("CustomerType1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> ProductDescriptions {
+            get {
+                return this.ProductDescriptionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductDescriptionsField, value) != true)) {
+                    this.ProductDescriptionsField = value;
+                    this.RaisePropertyChanged("ProductDescriptions");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Size", Namespace="http://schemas.datacontract.org/2004/07/CartApp.Entities")]
+    [System.SerializableAttribute()]
+    public partial class Size : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> ProductDescriptionsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SizeDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SizeNumberField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> ProductDescriptions {
+            get {
+                return this.ProductDescriptionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductDescriptionsField, value) != true)) {
+                    this.ProductDescriptionsField = value;
+                    this.RaisePropertyChanged("ProductDescriptions");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SizeDescription {
+            get {
+                return this.SizeDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SizeDescriptionField, value) != true)) {
+                    this.SizeDescriptionField = value;
+                    this.RaisePropertyChanged("SizeDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal SizeNumber {
+            get {
+                return this.SizeNumberField;
+            }
+            set {
+                if ((this.SizeNumberField.Equals(value) != true)) {
+                    this.SizeNumberField = value;
+                    this.RaisePropertyChanged("SizeNumber");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Product", Namespace="http://schemas.datacontract.org/2004/07/CartApp.Entities")]
+    [System.SerializableAttribute()]
+    public partial class Product : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSoldField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SPAShoppingCartApp.CartService.ProductDescription ProductDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ProductDetailIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> SoldDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> StockInDateField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSold {
+            get {
+                return this.IsSoldField;
+            }
+            set {
+                if ((this.IsSoldField.Equals(value) != true)) {
+                    this.IsSoldField = value;
+                    this.RaisePropertyChanged("IsSold");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SPAShoppingCartApp.CartService.ProductDescription ProductDescription {
+            get {
+                return this.ProductDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductDescriptionField, value) != true)) {
+                    this.ProductDescriptionField = value;
+                    this.RaisePropertyChanged("ProductDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ProductDetailId {
+            get {
+                return this.ProductDetailIdField;
+            }
+            set {
+                if ((this.ProductDetailIdField.Equals(value) != true)) {
+                    this.ProductDetailIdField = value;
+                    this.RaisePropertyChanged("ProductDetailId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> SoldDate {
+            get {
+                return this.SoldDateField;
+            }
+            set {
+                if ((this.SoldDateField.Equals(value) != true)) {
+                    this.SoldDateField = value;
+                    this.RaisePropertyChanged("SoldDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> StockInDate {
+            get {
+                return this.StockInDateField;
+            }
+            set {
+                if ((this.StockInDateField.Equals(value) != true)) {
+                    this.StockInDateField = value;
+                    this.RaisePropertyChanged("StockInDate");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CartService.ICartAppService")]
+    public interface ICartAppService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICartAppService/DoWork", ReplyAction="http://tempuri.org/ICartAppService/DoWorkResponse")]
+        void DoWork();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICartAppService/GetCategories", ReplyAction="http://tempuri.org/ICartAppService/GetCategoriesResponse")]
+        System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.Category> GetCategories();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICartAppService/GetProducts", ReplyAction="http://tempuri.org/ICartAppService/GetProductsResponse")]
+        System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> GetProducts();
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ICartAppServiceChannel : SPAShoppingCartApp.CartService.ICartAppService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CartAppServiceClient : System.ServiceModel.ClientBase<SPAShoppingCartApp.CartService.ICartAppService>, SPAShoppingCartApp.CartService.ICartAppService {
+        
+        public CartAppServiceClient() {
+        }
+        
+        public CartAppServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public CartAppServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public CartAppServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public CartAppServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public void DoWork() {
+            base.Channel.DoWork();
+        }
+        
+        public System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.Category> GetCategories() {
+            return base.Channel.GetCategories();
+        }
+        
+        public System.Collections.ObjectModel.ObservableCollection<SPAShoppingCartApp.CartService.ProductDescription> GetProducts() {
+            return base.Channel.GetProducts();
+        }
+    }
+}

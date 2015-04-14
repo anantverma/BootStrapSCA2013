@@ -70,6 +70,7 @@
           <Property Name="Category" Type="int" />
           <Property Name="Customer" Type="int" />
           <Property Name="Price" Type="numeric" Precision="10" Scale="3" Nullable="false" />
+          <Property Name="Image" Type="image" />
         </EntityType>
         <EntityType Name="Size">
           <Key>
@@ -299,6 +300,7 @@
           <NavigationProperty Name="CustomerType" Relationship="ShoppingCartDbModel.FK_tbl_ProductDescription_tbl_CustomerType" FromRole="ProductDescription" ToRole="CustomerType" />
           <NavigationProperty Name="Products" Relationship="ShoppingCartDbModel.FK_tbl_Product_tbl_ProductDescription" FromRole="ProductDescription" ToRole="Product" />
           <NavigationProperty Name="Size1" Relationship="ShoppingCartDbModel.FK_tbl_ProductDescription_tbl_Size" FromRole="ProductDescription" ToRole="Size" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="Size">
           <Key>
@@ -448,6 +450,7 @@
           <EntitySetMapping Name="ProductDescriptions">
             <EntityTypeMapping TypeName="ShoppingCartDbModel.ProductDescription">
               <MappingFragment StoreEntitySet="ProductDescription">
+                <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Customer" ColumnName="Customer" />
                 <ScalarProperty Name="Category" ColumnName="Category" />

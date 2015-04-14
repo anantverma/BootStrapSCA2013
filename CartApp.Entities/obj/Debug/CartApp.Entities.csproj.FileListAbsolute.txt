@@ -1,0 +1,5 @@
+E:\Codes\POC\BootStrapSCA2013\CartApp.Entities\bin\Debug\CartApp.Entities.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.Entities\bin\Debug\CartApp.Entities.pdb
+E:\Codes\POC\BootStrapSCA2013\CartApp.Entities\obj\Debug\CartApp.Entities.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.Entities\obj\Debug\CartApp.Entities.pdb
+E:\Codes\POC\BootStrapSCA2013\CartApp.Entities\obj\Debug\CartApp.Entities.csprojResolveAssemblyReference.cache

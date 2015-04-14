@@ -1,4 +1,4 @@
-﻿@model SPAShoppingCartApp.Areas.Product.Models.Product
+﻿@model SPAShoppingCartApp.CartService.ProductDescription
 
 @{
     ViewBag.Title = "Product";
@@ -11,18 +11,18 @@
             <img itemprop="image" class="img-responsive" src="http://img6a.flixcart.com/image/shoe/f/c/7/black-white-scarle-hellion-m-adidas-8-400x400-imaefsdxhpn4cxvf.jpeg" alt="External  Modem">
         </div>
         <div class="col-md-3">
-            <div class="detailid"><strong>Product ID:</strong> <span itemprop="productID">@Model.ProductId</span></div>
+            <div class="detailid"><strong>Product ID:</strong> <span itemprop="productID">@Model.Id</span></div>
             <div class="detailname"><span itemprop="name">@Model.ProductName</span></div>
-            <div class="prodinstock detailinstock"><strong>In Stock:</strong> 50</div>
+            <div class="prodinstock detailinstock"><strong>In Stock:</strong>@Model.Products.Where(product => product.IsSold != true).ToList().Count</div>
             <div class="detailprice" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                <strong>Price:</strong> <span class="price" id="pricediv0" itemprop="price">@Model.ProductPrice</span>
+                <strong>Price:</strong> <span class="price" id="pricediv0" itemprop="price">@Model.Price</span>
             </div>
         </div>
         <div class="col-md-3">
             <div class="quantitydiv detailquantityinput" style="margin-right: 12px; white-space: nowrap">
                 <input type="text" name="quant" id="w0quant" maxlength="5" size="4" value="1" title="Quantity" style="float: left">
             </div>
-            @Html.ActionLink("Add To Cart", "AddProductToCart", "ShoppingCart", new { area = "ShoppingCart", productId = Model.ProductId, quantity = "2" }, htmlAttributes: new { @class = "username", title = "Manage" })
+            @Html.ActionLink("Add To Cart", "AddProductToCart", "ShoppingCart", new { area = "ShoppingCart", productId = Model.Id, quantity = "2" }, htmlAttributes: new { @class = "username", title = "Manage" })
         </div>
         <div class="col-md-3">
             <p class="pagenums" align="center">
@@ -36,41 +36,4 @@
             </p>
         </div>
     </div>
-    <ul class="nav nav-tabs" style="align-content:center;">
-        <li class="active"><a href="#">Spectificatons</a>
-            <div>
-                <h2>Getting started</h2>
-                <p>
-                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                    enables a clean separation of concerns and gives you full control over markup
-                    for enjoyable, agile development.
-                </p>
-                <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-            </div>
-        </li>
-        <li>
-            <div>
-                <a href="#">Reviews</a>
-                <h2>Getting started</h2>
-                <p>
-                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                    enables a clean separation of concerns and gives you full control over markup
-                    for enjoyable, agile development.
-                </p>
-                <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-            </div>
-        </li>
-        <li>
-            <div>
-                <a href="#">Messages</a>
-                <h2>Getting started</h2>
-                <p>
-                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                    enables a clean separation of concerns and gives you full control over markup
-                    for enjoyable, agile development.
-                </p>
-                <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-            </div>
-        </li>
-    </ul>
 </div>

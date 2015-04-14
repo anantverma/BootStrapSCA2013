@@ -19,6 +19,12 @@
   <wsdl:message name="ICartAppService_GetCategories_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
   </wsdl:message>
+  <wsdl:message name="ICartAppService_GetProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="ICartAppService_GetProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICartAppService">
     <wsdl:operation name="DoWork">
       <wsdl:input wsaw:Action="http://tempuri.org/ICartAppService/DoWork" message="tns:ICartAppService_DoWork_InputMessage" />
@@ -27,6 +33,10 @@
     <wsdl:operation name="GetCategories">
       <wsdl:input wsaw:Action="http://tempuri.org/ICartAppService/GetCategories" message="tns:ICartAppService_GetCategories_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICartAppService/GetCategoriesResponse" message="tns:ICartAppService_GetCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICartAppService/GetProducts" message="tns:ICartAppService_GetProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICartAppService/GetProductsResponse" message="tns:ICartAppService_GetProducts_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICartAppService" type="tns:ICartAppService">
@@ -42,6 +52,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetCategories">
       <soap:operation soapAction="http://tempuri.org/ICartAppService/GetCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <soap:operation soapAction="http://tempuri.org/ICartAppService/GetProducts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

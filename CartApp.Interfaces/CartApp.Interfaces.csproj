@@ -39,16 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL Interfaces\ICategoryBL.cs" />
-    <Compile Include="BL Interfaces\IProductBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\IRepository.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CartApp.Entities\CartApp.Entities.csproj">
-      <Project>{6070e929-d16f-40fd-a159-521d6c9aabbb}</Project>
-      <Name>CartApp.Entities</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

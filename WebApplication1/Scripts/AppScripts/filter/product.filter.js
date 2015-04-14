@@ -21,7 +21,7 @@
     });
 });
 
-(function () {
+$(function () {
     $('.filter-facetoption-link').click(function () {
         var filterLink = $(this)[0];
         var filterQuerystring;

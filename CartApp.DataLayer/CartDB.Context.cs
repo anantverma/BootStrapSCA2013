@@ -9,12 +9,11 @@
 
 namespace CartApp.DataLayer
 {
-    using CartApp.Entities;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ShoppingCartDbEntities : DbContext, IDisposable
+    public partial class ShoppingCartDbEntities : DbContext
     {
         public ShoppingCartDbEntities()
             : base("name=ShoppingCartDbEntities")
@@ -25,19 +24,6 @@ namespace CartApp.DataLayer
         {
             throw new UnintentionalCodeFirstException();
         }
-
-        public virtual DbSet<Brand> Brands { get; set; }
-        public virtual DbSet<Cart> Carts { get; set; }
-        public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Color> Colors { get; set; }
-        public virtual DbSet<CustomerType> CustomerTypes { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<ProductDescription> ProductDescriptions { get; set; }
-        public virtual DbSet<Size> Sizes { get; set; }
-
-        void IDisposable.Dispose()
-        {
-            
-        }
+    
     }
 }

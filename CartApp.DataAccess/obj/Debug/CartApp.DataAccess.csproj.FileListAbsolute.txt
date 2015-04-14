@@ -1,0 +1,14 @@
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\bin\Debug\CartApp.DataAccess.dll.config
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\bin\Debug\CartApp.DataAccess.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\bin\Debug\CartApp.DataAccess.pdb
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\bin\Debug\CartApp.DataLayer.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\bin\Debug\CartApp.Entities.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\bin\Debug\EntityFramework.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\bin\Debug\CartApp.DataLayer.pdb
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\bin\Debug\CartApp.Entities.pdb
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\bin\Debug\EntityFramework.xml
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\obj\Debug\CartApp.DataAccess.csprojResolveAssemblyReference.cache
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\obj\Debug\CartApp.DataAccess.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.DataAccess\obj\Debug\CartApp.DataAccess.pdb

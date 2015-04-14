@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SPAShoppingCartApp.Areas.Product.Models.Product>
+﻿@model IEnumerable<SPAShoppingCartApp.CartService.ProductDescription>
 
 @{
     ViewBag.Title = "GetProducts";
@@ -22,12 +22,18 @@
                     <div class="eStore-product-name">
                         <span class="eStore_price_value">@Html.DisplayFor(modelItem => item.ProductName)</span>
                     </div>
-                    @Html.DisplayFor(modelItem => item.ProductDescription)
+                    @Html.DisplayFor(modelItem => item.ProductDescription1)
                     <div class="eStore_price">
                         <span class="eStore_price_label"><strong>Price: </strong></span>
-                        <span class="eStore_price_value">@Html.DisplayFor(modelItem => item.ProductPrice)</span>
+                        <span class="eStore_price_value">@Html.DisplayFor(modelItem => item.Price)</span>
+                        <span class="eStore_price_label"><strong>Items in Stock: </strong></span>
+                        @{
+            var products = @item.Products.Where(product => product.IsSold != true).ToList();
+            int count = products.Count;
+                        }
+                        <span class="eStore_price_value">@count</span>
                     </div>
-                    @Html.ActionLink("Details", "ProductDetails", "Product", new { area = "Product", id = item.ProductId }, htmlAttributes: new { @class = "modal-link btn btn-success", title = "Manage" })
+                    @Html.ActionLink("Details", "ProductDetails", "Product", new { area = "Product", id = item.Id }, htmlAttributes: new { @class = "modal-link btn btn-success", title = "Manage" })
                 </div>
             </div>
         }

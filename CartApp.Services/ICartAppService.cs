@@ -13,10 +13,16 @@ namespace CartApp.Services
     public interface ICartAppService
     {
         [OperationContract]
+        
         void DoWork();
 
         [OperationContract]
+        [ApplyDataContractResolver]
         List<Category> GetCategories();
+
+        [OperationContract]
+        [ApplyDataContractResolver]
+        List<ProductDescription> GetProducts();
 
     }
 }

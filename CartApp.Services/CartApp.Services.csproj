@@ -39,7 +39,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,6 +74,7 @@
     <Compile Include="CartAppService.svc.cs">
       <DependentUpon>CartAppService.svc</DependentUpon>
     </Compile>
+    <Compile Include="ApplyDataContractResolverAttribute.cs" />
     <Compile Include="ICartAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,6 +82,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -85,8 +95,8 @@
       <Project>{30d076ed-08b1-44b5-8386-52fe82e948bd}</Project>
       <Name>CartApp.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CartApp.Entities\CartApp.Entities.csproj">
-      <Project>{6070e929-d16f-40fd-a159-521d6c9aabbb}</Project>
+    <ProjectReference Include="..\CartApp.Common\CartApp.Entities.csproj">
+      <Project>{32c94c44-3a25-4dda-9365-a8d11f5d7c9d}</Project>
       <Name>CartApp.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\CartApp.Interfaces\CartApp.Interfaces.csproj">

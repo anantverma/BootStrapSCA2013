@@ -1,0 +1,5 @@
+E:\Codes\POC\BootStrapSCA2013\CartApp.Tests\bin\Debug\CartApp.Tests.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.Tests\bin\Debug\CartApp.Tests.pdb
+E:\Codes\POC\BootStrapSCA2013\CartApp.Tests\obj\Debug\CartApp.Tests.csprojResolveAssemblyReference.cache
+E:\Codes\POC\BootStrapSCA2013\CartApp.Tests\obj\Debug\CartApp.Tests.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.Tests\obj\Debug\CartApp.Tests.pdb

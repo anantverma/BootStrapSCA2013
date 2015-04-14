@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SPAShoppingCartApp.CartService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,13 +14,14 @@ namespace SPAShoppingCartApp.Areas.Search.Controllers
         [ChildActionOnly]
         public ActionResult Search()
         {
-
-          
-            //List<SelectListItem> categoryList = new List<SelectListItem>();
-            //categoryList.Add(new SelectListItem { Text = "Shoes", Value = "Shoes" });
-            //categoryList.Add(new SelectListItem { Text = "Mobiles", Value = "Mobiles" });
-            //categoryList.Add(new SelectListItem { Text = "Bags", Value = "Bags" });
-            //ViewBag.Categories = categoryList;
+            List<SelectListItem> categoryList = new List<SelectListItem>();
+            ICartAppService service = new CartAppServiceClient();
+            var categories = service.GetCategories();
+            foreach(var category in categories)
+            {
+                categoryList.Add(new SelectListItem { Text = category.CategoryName, Value = category.Id.ToString() });
+            }
+            ViewBag.Categories = categoryList;
             return PartialView("_Search");
         }
         

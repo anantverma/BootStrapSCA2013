@@ -1,0 +1,10 @@
+E:\Codes\POC\BootStrapSCA2013\CartApp.Common\bin\Debug\CartApp.Entities.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.Common\bin\Debug\CartApp.Entities.pdb
+E:\Codes\POC\BootStrapSCA2013\CartApp.Common\obj\Debug\CartApp.Entities.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.Common\obj\Debug\CartApp.Entities.pdb
+E:\Codes\POC\BootStrapSCA2013\CartApp.Common\bin\Debug\CartApp.Entities.dll.config
+E:\Codes\POC\BootStrapSCA2013\CartApp.Common\bin\Debug\EntityFramework.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.Common\bin\Debug\EntityFramework.SqlServer.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.Common\bin\Debug\EntityFramework.xml
+E:\Codes\POC\BootStrapSCA2013\CartApp.Common\bin\Debug\EntityFramework.SqlServer.xml
+E:\Codes\POC\BootStrapSCA2013\CartApp.Common\obj\Debug\CartApp.Entities.csprojResolveAssemblyReference.cache

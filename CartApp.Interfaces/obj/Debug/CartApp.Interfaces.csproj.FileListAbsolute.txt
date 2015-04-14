@@ -1,0 +1,5 @@
+E:\Codes\POC\BootStrapSCA2013\CartApp.Interfaces\bin\Debug\CartApp.Interfaces.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.Interfaces\bin\Debug\CartApp.Interfaces.pdb
+E:\Codes\POC\BootStrapSCA2013\CartApp.Interfaces\obj\Debug\CartApp.Interfaces.csprojResolveAssemblyReference.cache
+E:\Codes\POC\BootStrapSCA2013\CartApp.Interfaces\obj\Debug\CartApp.Interfaces.dll
+E:\Codes\POC\BootStrapSCA2013\CartApp.Interfaces\obj\Debug\CartApp.Interfaces.pdb

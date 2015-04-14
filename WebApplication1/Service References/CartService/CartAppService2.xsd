@@ -23,4 +23,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetProducts">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CartApp.Entities" minOccurs="0" name="GetProductsResult" nillable="true" type="q2:ArrayOfProductDescription" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
